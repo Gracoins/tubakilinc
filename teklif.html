@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Diyetisyen Tuba Kılınç Üzümcü — Web Sitesi Teklifi</title>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet" />
+<style>
+  :root{--forest:#4E6353;--forest-lt:#6C8272;--forest-pale:#DEE6DD;--forest-deep:#34443A;--coral:#D2836B;--coral-deep:#A9614B;--ink:#2A2E27;--muted:#6C7566;--line:#E4E0D4;--paper:#F6F2EA;--ease:cubic-bezier(.32,.72,0,1)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#EEEAE0;color:var(--ink);font-family:'Epilogue',sans-serif;font-weight:400;line-height:1.65;padding:30px 16px}
+  .page{max-width:820px;margin:0 auto 26px;background:#fff;box-shadow:0 20px 60px -24px rgba(0,0,0,.28);border-top:5px solid var(--coral)}
+  .inner{padding:52px 58px}
+  h2,h3,h4{font-weight:600;line-height:1.16;letter-spacing:-.01em}
+  .pf{font-family:'Spectral',serif;font-style:italic;font-weight:600;color:var(--coral-deep)}
+  h2,h3,h4,.logo b{font-family:'Spectral',serif}
+  .grad{background:linear-gradient(100deg,var(--forest-deep),#8a9182 45%,var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding-bottom:26px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .mk{width:48px;height:48px;border-radius:50%;overflow:hidden;flex:none;border:1.5px solid var(--forest-pale)}
+  .logo .mk img{width:100%;height:100%;object-fit:cover}
+  .logo b{font-weight:700;font-size:1.35rem;display:block}
+  .logo i.s{font-style:normal;font-size:.52rem;letter-spacing:.26em;color:var(--muted);text-transform:uppercase;display:block;font-weight:500}
+  .doclabel{text-align:right;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .doclabel b{display:block;font-weight:700;font-size:1.5rem;color:var(--coral-deep);margin-top:5px;text-transform:none;letter-spacing:-.02em}
+  .meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.8rem;color:var(--muted);margin:22px 0 30px}
+  .meta b{color:var(--ink);font-weight:600}
+  .eyebrow{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--coral-deep);font-weight:700}
+  h2{font-size:1.95rem;margin:6px 0 14px}
+  h3{font-size:1.26rem;margin:0 0 6px}
+  p{margin-bottom:12px}
+  .lead{background:var(--forest-pale);border-left:3px solid var(--forest);padding:20px 24px;margin:8px 0 26px;font-size:1rem}
+  .lead strong{font-weight:700}
+  .hi{background:var(--forest-deep);color:#fff;border-radius:14px;padding:24px 28px;margin:18px 0}
+  .hi .hd{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:#E8C9BB;font-weight:700;margin-bottom:9px}
+  .hi b{color:#fff;font-weight:700}
+  .hi p{color:rgba(255,255,255,.8);margin-bottom:9px}
+  .hi p:last-child{margin-bottom:0}
+  .good{background:#EAE7D9;border:1px solid #D9D3BF;border-radius:14px;padding:22px 26px;margin:18px 0}
+  .good .hd{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--forest-deep);font-weight:700;margin-bottom:9px}
+  .good b{color:var(--coral-deep)}
+  .stat{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px 20px;margin:14px 0 4px;font-size:.86rem}
+  .stat div{border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:8px}
+  .stat b{display:block;font-size:1.5rem;color:#E8C9BB;font-weight:700}
+  .stat span{color:#b0b8a9;font-size:.74rem;letter-spacing:.06em}
+  section.block{margin:30px 0}
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;margin-top:14px}
+  .feat div{display:flex;gap:10px;align-items:flex-start;font-size:.89rem}
+  .feat svg{width:16px;height:16px;color:var(--forest);flex:none;margin-top:5px}
+  .feat b{font-weight:700}
+  .demo{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:var(--forest-deep);color:#fff;padding:18px 24px;border-radius:12px;margin-top:14px}
+  .demo a{color:#E8C9BB;font-weight:700;word-break:break-all}
+  .demo small{color:#b0b8a9;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+  .price-hero{background:var(--forest-deep);color:#fff;padding:32px 34px;border-radius:1.75rem;margin-top:16px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;box-shadow:inset 0 1px 1px rgba(255,255,255,.08);border:1px solid rgba(210,131,107,.32)}
+  .price-hero .col small{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#E8C9BB}
+  .price-hero .col b{font-size:2.7rem;font-weight:700;display:block;line-height:1.1;letter-spacing:-.04em}
+  .price-hero .col span{font-size:.84rem;color:#b0b8a9}
+  .price-hero .divider{width:1px;background:rgba(210,131,107,.5)}
+  .roi{background:var(--forest-pale);border:1px solid #CBD6C7;border-radius:12px;padding:20px 24px;margin-top:16px;font-size:.92rem}
+  .roi b{color:var(--forest-deep)}
+  table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.88rem}
+  th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  td.amt{text-align:right;font-size:1.22rem;white-space:nowrap;font-weight:700;letter-spacing:-.02em}
+  tr.total td{border-bottom:none;border-top:2px solid var(--coral);font-weight:700;padding-top:16px}
+  tr.total td.amt{color:var(--coral-deep);font-size:1.5rem}
+  .rec{display:inline-block;background:var(--coral);color:#fff;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:100px;font-weight:700;margin-left:8px;vertical-align:middle}
+  .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+  .opt{border:1px solid var(--line);border-radius:1.6rem;padding:24px 22px;background:var(--paper);transition:.5s var(--ease)}
+  .opt.hl{border-color:var(--coral);box-shadow:0 0 0 1px var(--coral)}
+  .opt .k{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--coral-deep);font-weight:700}
+  .opt h4{font-size:1.12rem;margin:4px 0 10px}
+  .opt .pr{font-size:1.4rem;font-weight:700;letter-spacing:-.03em}
+  .opt .pr small{font-size:.76rem;color:var(--muted);font-weight:400}
+  .opt p{font-size:.79rem;color:var(--muted);margin-top:8px;margin-bottom:0}
+  ul.plain{list-style:none;margin-top:12px}
+  ul.plain li{display:flex;gap:11px;align-items:flex-start;font-size:.88rem;margin-bottom:9px}
+  ul.plain svg{width:15px;height:15px;color:var(--forest);flex:none;margin-top:5px}
+  ul.plain b{font-weight:700}
+  .terms{font-size:.79rem;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:14px}
+  .terms b{color:var(--ink);font-weight:700}
+  .cta{margin-top:30px;border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
+  .cta .sign b{font-size:1.2rem;display:block;font-weight:700}
+  .cta .sign span{font-size:.83rem;color:var(--muted)}
+  .btn{background:var(--coral);color:#fff;padding:10px 8px 10px 24px;border-radius:100px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:12px}
+  .btn i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;font-style:normal}
+  .foot{text-align:center;font-size:.7rem;color:var(--muted);margin-top:28px}
+  .noprint{max-width:820px;margin:0 auto 22px;text-align:center}
+  .noprint button{background:var(--forest-deep);color:#fff;border:0;padding:12px 28px;border-radius:100px;font-family:'Epilogue',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.08em;cursor:pointer;text-transform:uppercase}
+  @media(max-width:680px){.inner{padding:34px 26px}.feat,.cards,.stat{grid-template-columns:1fr}.price-hero .divider{display:none}}
+  @media print{body{background:#fff;padding:0}.noprint{display:none}.page{box-shadow:none;margin:0}
+    .price-hero,.demo,.btn,.opt.hl,.rec,.hi,.good,.roi{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<div class="noprint"><button onclick="window.print()">⬇︎ PDF olarak kaydet / Yazdır</button></div>
+
+<div class="page"><div class="inner">
+
+  <div class="top">
+    <div class="logo">
+      <span class="mk"><img src="foto/avatar.jpg" alt="Tuba Kılınç Üzümcü"></span>
+      <span><b>Tuba Kılınç Üzümcü</b><i class="s">Diyetisyen — Bayraklı, İzmir</i></span>
+    </div>
+    <div class="doclabel">Fiyat Teklifi<b>Web Sitesi</b></div>
+  </div>
+
+  <div class="meta">
+    <div><b>Hazırlayan:</b> MY BASKETO LTD · gozankaya@gmail.com</div>
+    <div><b>Hazırlanan:</b> Diyetisyen Tuba Kılınç Üzümcü — Bayraklı, İzmir</div>
+    <div><b>Tarih:</b> 24.08.2026 · <b>Geçerlilik:</b> 14 gün</div>
+  </div>
+
+  <span class="eyebrow">Merhaba 👋</span>
+  <div class="lead">
+    Sizi inceledim — Google'da <strong>5.0 puan ve 73 değerlendirme</strong> ile gerçekten güçlü bir
+    güven puanınız var. Kanserde beslenme, ağırlık yönetimi ve hastalıklarda beslenme gibi hassas
+    alanlarda uzmanlaşmışsınız. Ama bu güvenin arkasında <strong>sizin kontrolünüzde bir web adresi
+    yok</strong>.
+  </div>
+
+  <div class="hi">
+    <div class="hd">★ Asıl mesele burada</div>
+    <p>Google kaydınızdaki "web sitesi" bağlantısı size değil, <b>doktorsitesi.com adlı paylaşılan bir
+    randevu platformuna</b> gidiyor — binlerce doktorun aynı şablonda listelendiği bir dizin sayfası,
+    kendi markanız değil.</p>
+    <p>Üstelik Mansuroğlu/Bayraklı'da aynı sokaktaki meslektaşlarınızın büyük çoğunluğunun <b>kendi
+    alan adlarıyla çalışan web siteleri var</b> — sizin 5.0 puanınız onlarınkinden hiç düşük değil,
+    ama tıklanacak kendi bir adresiniz yok.</p>
+    <div class="stat">
+      <div><b>5.0</b><span>Google puanı</span></div>
+      <div><b>73</b><span>Değerlendirme</span></div>
+      <div><b>0</b><span>Kendi adınıza web sitesi</span></div>
+    </div>
+    <p style="margin-top:16px;margin-bottom:0">Güveniniz zaten kanıtlı — eksik olan tek şey, bunu
+    taşıyan, sizin kontrolünüzdeki bir adres.</p>
+  </div>
+
+  <div class="good">
+    <div class="hd">✓ İyi haber</div>
+    <p style="margin-bottom:0"><b>tubakilincuzumcu.com</b> — kendi adınızla birebir örtüşen alan adı —
+    şu an <b>boşta ve müsait</b>. RDAP sorgusuyla doğruladım: kimse almamış. İmza tarihinde hâlâ boşta
+    olması şartıyla, sizin adınıza kaydedip siteye bağlıyoruz.</p>
+  </div>
+
+  <p style="font-size:.9rem;color:var(--muted);margin-top:14px">
+    Anlatmak yerine yaptım. Üç uzmanlık alanınızı anlatan, WhatsApp'a bağlı bir randevu formu olan
+    hazır bir site aşağıda.
+  </p>
+
+  <div class="demo">
+    <div><small>Canlı demo — şimdi inceleyin</small><br><a href="https://gracoins.github.io/tubakilinc/">gracoins.github.io/tubakilinc</a></div>
+    <div><small>Telefon &amp; bilgisayar uyumlu</small></div>
+  </div>
+
+  <section class="block">
+    <span class="eyebrow">Sitenin Kalbi</span>
+    <h2>Uzmanlığınızı, <span class="pf grad">tek sayfaya</span></h2>
+    <p style="font-size:.92rem">
+      Bio'nuzdaki üç uzmanlık alanını (kanserde beslenme, ağırlık yönetimi, hastalıklarda beslenme)
+      sitenin merkezine koydum:
+    </p>
+    <ul class="plain">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Uzmanlık Alanlarım bölümü —</b> üç alanınız ayrı ayrı, tek bakışta anlatılıyor.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Sonuç —</b> talebin tamamı, hangi alanla ilgilendiği belli şekilde <b>düzenli bir mesaj halinde WhatsApp'ınıza düşüyor</b>.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Google puanınız —</b> 5.0/73 değerlendirme, sitenin en görünür yerinde.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Neler Dahil</span>
+    <h2>Siteniz neler sunuyor?</h2>
+    <div class="feat">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Markanıza özel, çam yeşili-mercan tasarım</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>WhatsApp'a bağlı randevu formu</b></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Üç uzmanlık alanınızı anlatan bölüm</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Kendi fotoğrafınızla hakkımda bölümü</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Google puanı ve değerlendirme rozetiniz</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Çalışma saatleri ve konum bilgisi</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>WhatsApp/Instagram'da şık link önizleme kartı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Kendi adresiniz</b> — artık paylaşılabilir, hatırlanabilir bir marka linki</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Mobil öncelikli, hızlı yüklenen tasarım</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Fiyat/paket listesi bölümü (isterseniz eklenir)</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Yatırımınız</span>
+    <h2>Fiyatlandırma</h2>
+    <div class="price-hero">
+      <div class="col"><small>Kurulum · Tek Seferlik</small><b>25.000 ₺</b><span>Tasarım, içerik, randevu formu, alan adı, yayına alma</span></div>
+      <div class="divider"></div>
+      <div class="col"><small>Bakım · Aylık</small><b>3.000 ₺<small style="font-size:1rem;color:#b0b8a9;font-weight:400"> /ay</small></b><span>Alan adı, hosting, güncellemeler &amp; öncelikli destek</span></div>
+    </div>
+    <div class="roi">
+      Şöyle bakalım: bir danışmanlık paketinin bedeli aylık bakımı zaten karşılıyor. 6.300 takipçiden
+      ayda sadece <b>bir yeni danışan</b> siteden desteğe dönse, yatırım kendini fazlasıyla çıkarır.
+      Kurulum bedeli ise <b>bir kerelik</b> — site ve alan adı sonrasında sizin malınız olur.
+    </div>
+    <table>
+      <tr><th>Kalem</th><th>Açıklama</th><th style="text-align:right">Tutar</th></tr>
+      <tr><td>Web Sitesi Kurulumu</td><td>Özel tasarım, içerik yazımı, uzmanlık alanları bölümü, mobil uyum</td><td class="amt">15.500 ₺</td></tr>
+      <tr><td>Randevu Formu</td><td>WhatsApp'a otomatik talep iletimi</td><td class="amt">5.500 ₺</td></tr>
+      <tr><td>Fotoğraf &amp; Galeri Düzeni</td><td>Kendi fotoğrafınızdan hazırlanan hero ve hakkımda bölümleri</td><td class="amt">4.000 ₺</td></tr>
+      <tr><td><b>Alan Adı</b></td><td><b>Sizin adınıza kayıtlı — tubakilincuzumcu.com şu an müsait</b></td><td class="amt">Dahil</td></tr>
+      <tr><td>Aylık Bakım Paketi</td><td>Alan adı + hosting + SSL, içerik güncellemeleri, teknik destek</td><td class="amt">3.000 ₺/ay</td></tr>
+      <tr class="total"><td>Başlangıç Ödemesi</td><td>Kurulum + ilk ay bakım</td><td class="amt">28.000 ₺</td></tr>
+    </table>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Aylık 3.000 ₺ ne kapsıyor?</span>
+    <h3 style="margin-top:8px">Sizin uğraşacağınız hiçbir şey kalmıyor</h3>
+    <ul class="plain">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Alan adı yenileme takibi</b> — tubakilincuzumcu.com'un süresi dolmadan biz yeniliyoruz, tekrar boşa düşmesin diye takip bizde.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Hosting ve SSL yönetimi</b> — site 7/24 açık ve güvenli kalır.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>İçerik güncellemeleri</b> — yeni fotoğraf ya da bilgi gönderin, aynı hafta sitede olur.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Randevu formu bakımı</b> — aksaklık olursa aynı gün çözülür.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Ödeme Seçenekleri</span>
+    <h2>Size uygun olanı seçin</h2>
+    <div class="cards">
+      <div class="opt">
+        <div class="k">Seçenek A</div><h4>Sadece Kurulum</h4>
+        <div class="pr">25.000 ₺</div>
+        <p>Site ve alan adı sizin olur. Güncelleme ve teknik yönetim size ait.</p>
+      </div>
+      <div class="opt hl">
+        <div class="k">Seçenek B <span class="rec">Önerilen</span></div><h4>Kurulum + Bakım</h4>
+        <div class="pr">25.000 ₺ <small>+ 3.000 ₺/ay</small></div>
+        <p>Her şeyi biz yönetiriz. Siz sadece danışanlarınızla ilgilenirsiniz.</p>
+      </div>
+      <div class="opt">
+        <div class="k">Seçenek C</div><h4>Yıllık Anlaşma</h4>
+        <div class="pr">25.000 ₺ <small>+ 30.000 ₺/yıl</small></div>
+        <p>Bakımı yıllık peşin ödeyin, <b>2 ay hediye</b> (36.000 yerine 30.000 ₺).</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="terms">
+    <b>Şartlar:</b> Kurulum bedelinin %50'si iş başlangıcında, %50'si yayına alımında ödenir. Alan adı
+    Tuba Kılınç Üzümcü adına kaydedilir ve bakım anlaşmasından bağımsız olarak size aittir — imza
+    tarihinde hâlâ boşta olması şartına bağlıdır. Aylık bakım, sitenin yayına alındığı tarihte başlar ve
+    aylık faturalandırılır; 30 gün önceden bildirimle sonlandırılabilir. Bu teklif <b>14 gün</b>
+    geçerlidir. Hizmet, MY BASKETO LTD (İngiltere) tarafından faturalandırılır; belirtilen tutarlar
+    nettir.
+  </div>
+
+  <div class="cta">
+    <div class="sign"><b>MY BASKETO LTD</b><span>Web Tasarım &amp; Dijital Çözümler · gozankaya@gmail.com</span></div>
+    <div class="btn">Onaylamak için ulaşın <i>↗</i></div>
+  </div>
+
+  <div class="foot">Bu teklif Diyetisyen Tuba Kılınç Üzümcü için özel olarak hazırlanmıştır · Canlı demo: gracoins.github.io/tubakilinc</div>
+
+</div></div>
+</body>
+</html>
